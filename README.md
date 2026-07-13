@@ -1,20 +1,20 @@
 # 📝 Todo Backend API
 
-A RESTful Todo Backend API built using **Node.js**, **Express.js**, **MongoDB**, and **Mongoose**. This project was developed as part of the **QSkill Backend Development Internship (Slab 1)**.
+A RESTful Todo Backend API built with **Node.js**, **Express.js**, **MongoDB Atlas**, and **Mongoose**. This project provides complete CRUD operations for managing todos and was developed as part of the **QSkill Backend Development Internship (Slab 1)**.
 
 ---
 
 ## 🚀 Features
 
-- Create a Todo
-- Get All Todos
-- Get Todo by ID
-- Update Todo
-- Delete Todo
-- Mark Todo as Completed
-- MongoDB Atlas Integration
-- REST API Architecture
-- MVC Folder Structure
+- ✅ Create a Todo
+- ✅ Get All Todos
+- ✅ Get Todo by ID
+- ✅ Update a Todo
+- ✅ Delete a Todo
+- ✅ Mark Todo as Completed
+- ✅ MongoDB Atlas Integration
+- ✅ RESTful API
+- ✅ MVC Architecture
 
 ---
 
@@ -30,66 +30,67 @@ A RESTful Todo Backend API built using **Node.js**, **Express.js**, **MongoDB**,
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
 todo-backend/
-│
-├── config/
+│── config/
 │   └── db.js
 │
-├── controllers/
+│── controllers/
 │   └── todoController.js
 │
-├── models/
+│── models/
 │   └── Todo.js
 │
-├── routes/
+│── routes/
 │   └── todoRoutes.js
 │
-├── .env
-├── package.json
-├── server.js
-└── README.md
+│── .env
+│── .gitignore
+│── package.json
+│── package-lock.json
+│── server.js
+│── README.md
 ```
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/todo-backend.git
+git clone https://github.com/hemanthgantinapalli-ai/todo-backend.git
 ```
 
-Go to the project folder
+### Navigate to the project
 
 ```bash
 cd todo-backend
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Create a `.env` file
+### Create `.env`
 
 ```env
 PORT=5000
 
-MONGO_URI=Your_MongoDB_Connection_String
+MONGO_URI=your_mongodb_connection_string
 ```
 
-Run the project
+### Start the server
 
 ```bash
 npm run dev
 ```
 
-Server starts on
+Server runs on:
 
 ```
 http://localhost:5000
@@ -99,121 +100,84 @@ http://localhost:5000
 
 # 📌 API Endpoints
 
-## Create Todo
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/todos` | Create Todo |
+| GET | `/api/todos` | Get All Todos |
+| GET | `/api/todos/:id` | Get Todo By ID |
+| PUT | `/api/todos/:id` | Update Todo |
+| DELETE | `/api/todos/:id` | Delete Todo |
+| PATCH | `/api/todos/:id/complete` | Mark Todo Completed |
 
-**POST**
+---
 
-```
-/api/todos
-```
+## 📤 Sample Request
 
-Request Body
+### POST `/api/todos`
 
 ```json
 {
+  "title": "Learn Express",
+  "description": "Complete Todo Backend Project"
+}
+```
+
+---
+
+## 📥 Sample Response
+
+```json
+{
+  "success": true,
+  "message": "Todo Created Successfully",
+  "data": {
+    "_id": "687372c0b12f8c52a92f3e0a",
     "title": "Learn Express",
-    "description": "Complete Backend Project"
+    "description": "Complete Todo Backend Project",
+    "completed": false,
+    "createdAt": "2026-07-13T09:20:10.000Z",
+    "updatedAt": "2026-07-13T09:20:10.000Z"
+  }
 }
 ```
 
 ---
 
-## Get All Todos
+## 🧪 Testing
 
-**GET**
-
-```
-/api/todos
-```
-
----
-
-## Get Todo By ID
-
-**GET**
-
-```
-/api/todos/:id
-```
-
----
-
-## Update Todo
-
-**PUT**
-
-```
-/api/todos/:id
-```
-
-Request Body
-
-```json
-{
-    "title": "Learn Express JS",
-    "description": "Backend Completed"
-}
-```
-
----
-
-## Delete Todo
-
-**DELETE**
-
-```
-/api/todos/:id
-```
-
----
-
-## Mark Todo as Completed
-
-**PATCH**
-
-```
-/api/todos/:id/complete
-```
-
----
-
-# 📷 Sample Response
-
-```json
-{
-    "success": true,
-    "message": "Todo Created Successfully",
-    "data": {
-        "_id": "...",
-        "title": "Learn Node.js",
-        "description": "Complete Backend Project",
-        "completed": false
-    }
-}
-```
-
----
-
-# 🧪 Testing
-
-Test the APIs using
+You can test the APIs using:
 
 - Postman
-- Thunder Client
+- Thunder Client (VS Code)
 - Insomnia
 
 ---
 
-# 👨‍💻 Author
+## 📸 API Demo
 
-**Hemanth Gantinapalli**
-
-- Full Stack Developer (MERN)
-- AI & ML Graduate
-- GitHub: https://github.com/hemanthgantinapalli-ai
+| Feature | Endpoint |
+|----------|----------|
+| Create Todo | POST `/api/todos` |
+| Get Todos | GET `/api/todos` |
+| Get Todo | GET `/api/todos/:id` |
+| Update Todo | PUT `/api/todos/:id` |
+| Delete Todo | DELETE `/api/todos/:id` |
+| Complete Todo | PATCH `/api/todos/:id/complete` |
 
 ---
 
-# 📄 License
+## 👨‍💻 Author
 
-This project is developed for educational and internship purposes.
+**Hemanth Gantinapalli**
+
+- 🎓 B.Tech (Artificial Intelligence & Machine Learning)
+- 💻 MERN Stack Developer
+- 🌐 GitHub: https://github.com/hemanthgantinapalli-ai
+
+---
+
+## 📄 License
+
+This project is developed for learning and internship purposes.
+
+⭐ If you found this project useful, consider giving it a star!
